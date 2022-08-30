@@ -1,0 +1,50 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#include <windows.h>
+int main(){
+	int Voto, TotalArya, TotalMelisandre, TotalRamsay;
+              TotalArya=0; TotalMelisandre=0; TotalRamsay=0;
+		setlocale (LC_ALL ,"Portuguese");
+	do{
+				
+				printf(" ELEIÇÃO GAME OF THRONES\n");
+				printf(" 1. Arya Stark\n");
+				printf(" 2. Melisandre\n");
+				printf(" 3. Ramsay Bolton\n");
+				printf(" 4. Relatório\n");
+				printf(" 5. Sair\n");
+				printf("\n");
+				scanf("%d", &Voto); system("CLS");
+				
+		switch(Voto){
+			
+			case 1: TotalArya= TotalArya+1;break; 
+			case 2: TotalMelisandre= TotalMelisandre+1;break;
+			case 3: TotalRamsay= TotalRamsay+1;break;
+			case 4: printf("Arya Stark: %d\n Melisandre: %d\n Ramsey Bolton:%d\n",TotalArya,TotalMelisandre,TotalRamsay);
+			if(TotalArya>TotalMelisandre && TotalArya>TotalRamsay){
+				printf(" Personagem mais votado: Arya Stark\n");
+			}else{
+				if(TotalMelisandre>TotalArya && TotalMelisandre>TotalRamsay){
+					printf("Personagem mais votado: Melisadre\n");
+				}else{
+					if(TotalRamsay>TotalArya  && TotalRamsay>TotalMelisandre ){
+							printf("Personagem mais votado: Ramsay\n");
+					}else{
+						printf("Não existe a possibilidade de empate\n");
+					}
+				}
+			} system("pause"); system("CLS"); break;
+			case 5: break;
+			default: printf("Voto inváldo\n"); system("pause"); system("CLS");
+		}
+		
+	}while(Voto!=5);
+	
+	
+	
+	
+	return 0;
+}
+

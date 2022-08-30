@@ -1,0 +1,12 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+#include <windows.h>
+int main(){													
+int Num1, Num2, Num3;
+  for(Num1=1;Num1<4;Num1=Num1+2)
+     for(Num2=10;Num2<14;Num2=Num2+3)
+        for(Num3=6;Num3<9;Num3=Num3+1)
+  printf("%d %d %d\n",Num1,Num2,Num3);
+
+ return 0;}
